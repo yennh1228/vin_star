@@ -83,7 +83,7 @@ class _SignInPageState extends State<SignInPage> {
   TextButton signUp() {
     return TextButton(
       onPressed: () {
-        print("Đăng ký");
+        print("Đăng");
       },
       child: const Text(
         "Đăng ký",
