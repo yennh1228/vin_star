@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BuildPass extends StatefulWidget {
-  const BuildPass({Key? key}) : super(key: key);
+  final Function(String)? onChanged;
+  const BuildPass({Key? key, this.onChanged}) : super(key: key);
 
   @override
   State<BuildPass> createState() => _BuildPassState();

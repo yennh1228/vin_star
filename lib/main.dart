@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:vin_star/signInPage.dart';
+import 'package:vin_star/signin_page.dart';
 
 void main() {
   runApp(const MyApp());
