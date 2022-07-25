@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-
+import 'package:vin_star/profile_page.dart';
 import 'common/build_button.dart';
 import 'common/build_pass.dart';
 import 'common/build_text_field.dart';
 import 'common/color.dart';
 import 'common/hot_line.dart';
+// import 'common/keyboard.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -29,6 +30,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   padding: const EdgeInsets.all(18.0),
                   child: Column(
                     children: <Widget>[
+                      Stack(),
                       Container(
                         padding: const EdgeInsets.only(top: 100),
                         width: MediaQuery.of(context).size.width / 2.5,
@@ -38,7 +40,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       BuildTextField(
                         labelText: 'Số điện thoại',
                         hintText: '0123456789',
-                        keyboardType: TextInputType.number,
+                        keyboardType: TextInputType.phone,
                         onChanged: (value) {
                           phoneNum = value;
                         },
@@ -71,6 +73,11 @@ class _SignUpPageState extends State<SignUpPage> {
                               print(phoneNum);
                               print(name);
                               print(pass);
+                              Navigator.of(context)
+                                  .pushReplacement(MaterialPageRoute(
+                                builder: (context) => const ProfilePage(),
+                                settings: const RouteSettings(name: "SignUp"),
+                              ));
                             },
                           ),
                         ],

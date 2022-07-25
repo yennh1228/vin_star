@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vin_star/profile_page.dart';
 import 'package:vin_star/signup_page.dart';
 
 import 'common/build_button.dart';
@@ -70,6 +71,12 @@ class _SignInPageState extends State<SignInPage> {
                               onPressed: () {
                                 print(phoneNum);
                                 print(pass);
+                                Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ProfilePage(),
+                                        settings: const RouteSettings(
+                                            name: "SignIn")));
                               }),
                         ],
                       ),
