@@ -1,8 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:vin_star/check.dart';
-import 'package:vin_star/left_menu_page.dart';
+
 import 'package:vin_star/signin_page.dart';
 
 void main() {

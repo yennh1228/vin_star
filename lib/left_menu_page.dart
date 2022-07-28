@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:vin_star/chang_password_page.dart';
 import 'package:vin_star/check.dart';
 import 'package:vin_star/common/ListViewMenu.dart';
 import 'package:vin_star/common/avatar.dart';
 import 'package:vin_star/common/color.dart';
+import 'package:vin_star/contact_page.dart';
+import 'package:vin_star/new_feed_page.dart';
+import 'package:vin_star/report_page.dart';
+import 'package:vin_star/signin_page.dart';
 
 class LeftMenuPage extends StatefulWidget {
   const LeftMenuPage({Key? key}) : super(key: key);
@@ -17,12 +22,12 @@ class _LeftMenuPageState extends State<LeftMenuPage> {
   @override
   void initState() {
     menu.addAll([
-      ListViewMenu(const Check(), Icons.list, "Sự cố"),
-      ListViewMenu(const Check(), Icons.report, "Cảnh báo"),
-      ListViewMenu(const Check(), Icons.security, "Đổi mật khẩu"),
+      ListViewMenu(const NewFeedPage(), Icons.list, "Sự cố"),
+      ListViewMenu(const ReportPage(), Icons.report, "Cảnh báo"),
+      ListViewMenu(const ChangePassWord(), Icons.security, "Đổi mật khẩu"),
       ListViewMenu(const Check(), Icons.receipt, "Điều khoản"),
-      ListViewMenu(const Check(), Icons.contacts, "Liên hệ"),
-      ListViewMenu(const Check(), Icons.exit_to_app, "Đăng xuất"),
+      ListViewMenu(const ContactPage(), Icons.contacts, "Liên hệ"),
+      ListViewMenu(const SignInPage(), Icons.exit_to_app, "Đăng xuất"),
     ]);
     super.initState();
   }
@@ -77,17 +82,10 @@ class _LeftMenuPageState extends State<LeftMenuPage> {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text("Hieu Tao",
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 16,
-            )),
-        const SizedBox(height: 16),
-        const Text("0944556692",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 16,
-            ))
+        Text("Hieu Tao",
+            style: const TextStyle(color: Colors.white, fontSize: 16)),
+        SizedBox(height: 16),
+        Text("0944556692", style: TextStyle(color: Colors.white, fontSize: 16))
       ],
     );
   }

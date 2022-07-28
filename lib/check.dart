@@ -12,17 +12,14 @@ class _CheckState extends State<Check> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("CHECK"),
+        title: const Text("CHECK"),
       ),
-      body: Container(
-        child: ListView.builder(
-          itemBuilder: (context, index) {
-            return ListTile(
-                leading: const Icon(Icons.list),
-                title: const Text("badjbajdhvbakdvhbadhjv"));
-          },
-          itemCount: 6,
-        ),
+      body: ListView.builder(
+        itemBuilder: (context, index) {
+          return const ListTile(
+              leading: Icon(Icons.list), title: Text("badjbajdhvbakdvhbadhjv"));
+        },
+        itemCount: 6,
       ),
     );
   }
