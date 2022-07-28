@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vin_star/common/build_text_field.dart';
+import 'package:vin_star/left_menu_page.dart';
 import 'common/avatar.dart';
 import 'common/build_button.dart';
 import 'common/color.dart';
@@ -26,6 +27,7 @@ class _ProfilePageState extends State<ProfilePage> {
         backgroundColor: AppColor.mainColor,
         title: const Text("Tài Khoản"),
       ),
+      drawer: const LeftMenuPage(),
       body: SafeArea(
         child: Column(
           children: [
@@ -42,7 +44,6 @@ class _ProfilePageState extends State<ProfilePage> {
                             width: 150,
                             height: 150,
                             child: const BuildAvatar(
-                              avatarPic: "assets/images/IMG_4799.JPG",
                               radius: 100,
                             ),
                           ),
@@ -120,7 +121,9 @@ class _ProfilePageState extends State<ProfilePage> {
                               print(adress);
                               print(phoneNum);
                               print(email);
-                              // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => )));
+                              // Navigator.of(context).pushReplacement(
+                              //     MaterialPageRoute(
+                              //         builder: (context) => LeftMenuPage()));
                             },
                           ),
                         ],

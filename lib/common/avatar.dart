@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class BuildAvatar extends StatelessWidget {
-  final String avatarPic;
+  // final String avatarPic;
   final double radius;
-  const BuildAvatar({Key? key, required this.avatarPic, required this.radius})
+  final String name;
+  const BuildAvatar({Key? key, required this.radius, this.name = ""})
       : super(key: key);
 
   @override
@@ -11,7 +12,7 @@ class BuildAvatar extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(radius),
       child: Image.asset(
-        avatarPic,
+        "assets/images/avatarPic.jpg",
         fit: BoxFit.cover,
       ),
     );
